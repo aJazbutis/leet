@@ -8,7 +8,6 @@ func firstMissingPositive(nums []int) int {
 
 	for i := range nums {
 		if int(math.Abs(float64(nums[i]))) < n+1 {
-			fmt.Println(nums[i], int(math.Abs(float64(nums[i])))-1)
 			if nums[int(math.Abs(float64(nums[i])))-1] > 0 {
 				nums[int(math.Abs(float64(nums[i])))-1] *= -1
 			}
