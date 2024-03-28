@@ -1,0 +1,19 @@
+You are given an integer array nums and an integer k.
+
+The frequency of an element x is the number of times it occurs in an array.
+
+An array is called good if the frequency of each element in this array is less than or equal to k.
+
+Return the length of the longest good subarray of nums.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+
+Initialize two pointers, l and r, to mark the left and right boundaries of the current subarray.
+Initialize an unordered_map to store the frequency of elements within the current subarray.
+Iterate through the array from left to right using the right pointer r.
+Increment the frequency of nums[r] in the map.
+If the frequency of nums[r] exceeds k, we need to shrink the window from the left until the frequency new inserted element decrease by one.
+Update the maximum length of the good subarray if necessary.
+Return the maximum length found.
+
