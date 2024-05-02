@@ -1,0 +1,13 @@
+func findMaxK(nums []int) int {
+	mp := make(map[int]struct{})
+	m := -1
+	for _, v := range nums {
+		_, ok := mp[-v]
+		if ok {
+			abs := int(math.Abs(float64(v)))
+			m = max(abs, m)
+		}
+		mp[v] = struct{}{}
+	}
+	return m
+}
